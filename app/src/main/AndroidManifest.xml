@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.indahaha.kasir">
+
+    <!-- Permissions for External Storage (PDF Export) -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <!-- Permission for Internet (if needed for future features) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Kasir"
+        tools:targetApi="31">
+
+        <!-- Main Activity (Launcher) -->
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Dashboard Activity -->
+        <activity
+            android:name=".ui.activity.DashboardActivity"
+            android:exported="false"
+            android:label="Dashboard" />
+
+        <!-- Master Data Activity -->
+        <activity
+            android:name=".ui.activity.MasterActivity"
+            android:exported="false"
+            android:label="Master Data" />
+
+        <!-- Traffic Activity (Belanja & Pemakaian) -->
+        <activity
+            android:name=".ui.activity.TrafficActivity"
+            android:exported="false"
+            android:label="Traffic Barang" />
+
+        <!-- Stock Opname Activity -->
+        <activity
+            android:name=".ui.activity.StockOpnameActivity"
+            android:exported="false"
+            android:label="Stock Opname" />
+
+        <!-- Report Activity (Laporan Keuangan - PDF) -->
+        <activity
+            android:name=".ui.activity.ReportActivity"
+            android:exported="false"
+            android:label="Laporan Keuangan" />
+
+        <!-- Advanced Report Activity (Laporan Per Barang - Screen Only) -->
+        <activity
+            android:name=".ui.activity.AdvancedReportActivity"
+            android:exported="false"
+            android:label="Laporan Detail Per Barang" />
+
+        <!-- FileProvider for sharing files (optional, for future PDF sharing) -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

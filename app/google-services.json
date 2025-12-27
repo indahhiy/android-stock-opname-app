@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "25071160568",
+    "project_id": "inv-cashier",
+    "storage_bucket": "inv-cashier.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25071160568:android:542a420d394a7a3160ff0d",
+        "android_client_info": {
+          "package_name": "com.indahaha.kasir"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcnjqn6herdmtXsFCQvmbnL4EgHwAvnZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

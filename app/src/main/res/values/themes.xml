@@ -1,0 +1,12 @@
+<resources>
+    <!-- Light Theme -->
+    <style name="Base.Theme.Kasir" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">#000000</item>
+        <item name="colorSurfaceVariant">#F5F5F5</item>
+    </style>
+
+    <style name="Theme.Kasir" parent="Base.Theme.Kasir" />
+</resources>
